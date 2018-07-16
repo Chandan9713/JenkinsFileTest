@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
           steps {
             echo 'this is my file'
+            bat 'mvn clean install'
           }
         }
         stage('test') {
@@ -20,5 +21,8 @@ pipeline {
         }
       }
     }
+  }
+  environment {
+    VERSION = 'readMavenPom().getVersion()'
   }
 }
