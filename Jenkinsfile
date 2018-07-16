@@ -22,7 +22,4 @@ pipeline {
       }
     }
   }
-  environment {
-    VERSION = 'readMavenPom().getVersion()'
-  }
 }
